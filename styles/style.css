@@ -1,37 +1,80 @@
+/*Hola! Este es mi Examen Práctico Final (Lucía Alvarez, Camada 10) 
+Espero le guste.
+Resolución Desktop 1440px
+Resolución Movile 425px
+*/
 * {
     margin: 0%;
     padding: 0%;
 }
 
 .margin-layout {
-    margin: 2.5% 11.5% 0;
+    margin: 0 11.5%;
+}
+
+.logo::before{
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    -moz-border-radius: 7.5px;
+    -webkit-border-radius: 7.5px;
+    border-radius: 7.5px;
+    background-color: #f3603b;
+    bottom: 14px;
+    right: 9px;
 }
 
 header {
-    background-color: aqua;
     height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-header ul{
-display: flex;
-justify-content: space-between;
+    margin-top: 2.5% !important;
 }
 
-header ul il{
-    width: 3.8%;
+
+header div:not(:nth-child(2)) {
+    margin-right: 0%;
+    margin-left: 0%;
+}
+header>div:nth-child(4){
+    display: none;
+}
+
+header div ul {
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
+header ul li {
     height: 19px;
     font-family: 'Be Vietnam Pro';
     font-weight: 500;
     font-size: 13px;
     line-height: 19px;
     color: #242E52;
-    }
-header button{
-    width: 12.1%;
-     }
-.botones{
+
+
+}
+header ul li a{
+    text-decoration: none;
+    color: inherit;
+}
+
+header ul li:not(:last-child) {
+    margin-right: 28px;
+}
+
+header button {
+    width: 134px;
+}
+
+.botones {
+    width: 134px;
     align-items: center;
     padding: 10px;
     height: 44px;
@@ -44,10 +87,13 @@ header button{
     background: #F3603B;
     color: white;
     border: none;
+
+    transition-property: background , color;
+    transition-duration: 250ms;
+    transition-timing-function: linear;
 }
+
 #first {
-    height: 503px;
-    background-color: lightcoral;
     margin: 2.5% 11.5%;
     display: flex;
 }
@@ -58,16 +104,15 @@ div.layout {
 }
 
 #titulo {
-    background-color: yellowgreen;
-
+    padding: 6% 0% 0px 0px;
+}
+#titulo p{
+    width: 67%;
 }
 
 h1 {
     color: #232C50;
     font-family: 'Be Vietnam Pro', sans-serif;
-    position: relative;
-    top: 71px;
-    width: 83%;
     font-style: normal;
     font-weight: 700;
     font-size: 3.6rem;
@@ -77,37 +122,22 @@ h1 {
 }
 
 .paragraphTypo {
-    position: static;
-    width: 363px;
-    height: 71px;
-    left: 0px;
-    top: 226px;
     margin-top: 28px;
-
     font-family: 'Be Vietnam Pro';
-    font-style: normal;
     font-weight: 500;
     font-size: 16.5584px;
     line-height: 157.1%;
-    display: flex;
-    align-items: center;
-    color: #000000;
-    ;
+    margin-bottom: 40.5px;
 }
 
-#graficos {
-    background-color: beige;
-}
 
 #second {
-    height: 500px;
-    background-color: grey;
     margin: 2.5% 11.5%;
     display: flex;
 }
 
-#titulo2 {
-    background-color: lightseagreen;
+#titulo2 p{
+    width: 65%;
 
 }
 
@@ -123,53 +153,21 @@ h2 {
 
 #titulo-different {
     position: static;
-    width: 433px;
-    height: 88px;
     left: 0px;
     top: 0px;
     line-height: 114.6%;
     color: #232851;
 }
-#boton2{
-    background: #F3603B;
-    width: 24.2% ;  
-}
 
-#lista {
-    background-color: blueviolet;
-}
-
-#lista ol li {
-    margin-left: 10px;
-}
-
-#lista ol {
-    list-style: none;
-    counter-reset: item;
-  
-}
-
-#lista ol li {
-    counter-increment: item;
-    margin-bottom: 5px;
-}
+#lista {}
 
 
-#lista ol li:before {
-    margin-right: 1.7%;
-    content: counter(item);
-    background: #f3603b;
-    border-radius: 30px;
-    color: white;
-    width: 11.8%;
-    height: 43px;
-    text-align: -webkit-center;
-    display: inline-block;
+#lista ul li div.header-list {
+    display: flex;
+    align-items: center;
 }
-#lista ol li h4{
-    display: inline-block;
-    position: relative;
-    top: 10px;
+
+#lista ul li h4 {
     width: 50%;
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
@@ -179,8 +177,13 @@ h2 {
     color: #323851;
 
 }
+
+#lista ul li p.GreyTypo {
+    margin-left: 16.3%;
+}
+
 .GreyTypo {
-margin-left: 15%;
+    margin-left: 15%;
     position: static;
     width: 85%;
     height: 104px;
@@ -199,35 +202,43 @@ margin-left: 15%;
 }
 
 #comments {
-    margin: 0 4.9% 0 6.4%;
+    margin: 0 4.9% 180px 6.4%;
 }
 
-#comments > div.comments{
-    background-color: lightblue;
-    height: 348px;
+#comments>div.comments {
     display: flex;
     text-align: center;
+    margin-bottom: 57.5px;
 }
 
-#comment1 {
+#comments .comment-card {
     flex: 1;
-    background-color: crimson;
+    background-color: #FAFAFA;
     height: inherit;
     text-align: center;
+
 }
-#comments h4{
-height: 25px;
-font-family: 'Be Vietnam Pro';
-font-weight: 700;
-font-size: 16.0714px;
-line-height: 156.6%;
-letter-spacing: -0.01em;
-color: #3F4868;
+
+.comments .comment-card img {
+    margin-top: -63px;
+    margin-bottom: 21px;
 }
-#comments p{
+
+#comments .comment-card h4 {
+    height: 25px;
+    font-family: 'Be Vietnam Pro';
+    font-weight: 700;
+    font-size: 16.0714px;
+    line-height: 156.6%;
+    letter-spacing: -0.01em;
+    color: #3F4868;
+}
+
+#comments .comment-card p {
     margin: 0 2.8%;
     width: inherit;
     text-align: center;
+    margin: 21px 4.9% 38.5px 3%;
 }
 
 #comment2 {
@@ -236,7 +247,7 @@ color: #3F4868;
     height: inherit;
 }
 
-#said {
+#comments h2 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -244,7 +255,8 @@ color: #3F4868;
     height: 61px;
     line-height: 156.6%;
     letter-spacing: -0.01em;
-    
+    margin-bottom: 109px;
+
 }
 
 #comment3 {
@@ -252,32 +264,39 @@ color: #3F4868;
     background-color: darkgreen;
     height: inherit;
 }
-#boton3{
-    width: 9.3%;
-    background: #F3603B;
+
+#boton3 {
     display: block;
     margin: auto;
-    }
+}
 
 #orange {
     margin: 0;
     background-color: #F3613C;
-    height: 224px;
-    }
-#orange div{
+}
+
+#orange > div {
     height: inherit;
-        display: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
-    }
-#boton4{
-    width: 12%;
-    background-color: white;
-    color: #F3603B;
-    display: flex;
-    }
-#orange p{
-    height: 96px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+}
+
+.botones-invertido {
+    background-color: white !important;
+    color: #F3603B !important;
+}
+
+.botones-invertido:hover{
+    background-color: #F3603B !important;
+    color: white !important;
+}
+
+
+
+#orange p {
     font-family: 'Be Vietnam Pro';
     font-weight: 700;
     font-size: 40px;
@@ -285,27 +304,210 @@ color: #3F4868;
     display: flex;
     letter-spacing: -0.005em;
     color: #FFFFFF;
-    width: 50%; 
+    width: 50%;
+
 }
 
-footer{
+footer {
     margin-top: 0;
     background-color: #1E1E26;
-    height: 247px;
+    padding: 53px 0;
 }
-footer section{
+
+footer section {
     height: inherit;
     display: flex;
     justify-content: space-between;
-    align-items: center;
 }
-h6{
-display: block;
-text-align: end;
-height: 19.85px;
-font-weight: 500;
-font-size: 12.5px;
-line-height: 18px;
-color: #8C8C94;
 
+
+footer section.margin-layout>div {
+    /* display: flex;
+    /* align-items: end; */
+    /* justify-content: end;  */
+}
+
+footer section div.social-networks {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+footer section div.social-networks img {
+    height: auto;
+    width: 88%;
+}
+
+footer section div.social-networks i {
+    font-size: 20px;
+}
+
+footer section div.social-networks i:not(:last-child) {
+    margin-right: 13px;
+}
+
+ ul {
+    color: white;
+}
+
+footer .links-container {
+    display: flex ;
+    justify-content: space-around;
+}
+footer section >div:nth-child(2) {
+ flex: 2;
+ width: 375px;
+}
+
+ul.links-footer>li:not(:last-child) {
+    margin-bottom: 12px;
+}
+
+div.contact-us form button.botones {
+    width: 63px;
+    height: 42px;
+}
+
+
+div.contact-us form input {
+    border-radius: 50px;
+    border: none;
+    padding: 0px 8px;
+    margin-right: 9px;
+    ;
+}
+
+div.contact-us form {
+    display: flex;
+    height: 44px;
+    margin-right: 20p;
+}
+
+h6 {
+    display: block;
+    text-align: end;
+    height: 19.85px;
+    font-weight: 500;
+    font-size: 12.5px;
+    line-height: 18px;
+    color: #8C8C94;
+
+}
+
+#graficos  img{
+    width: 100%;
+}
+
+.botones:hover{
+    background: white;
+    color:  #F3603B;
+    cursor: pointer;
+}
+
+@media screen and (max-width:1024px) {
+
+    #first {
+        flex-direction: column;
+        margin-bottom: 50px;
+    }
+
+    #titulo {
+        order: 2;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+    #titulo p{
+        width: 100%;
+    }
+
+    #graficos {
+        order: 1
+    }
+
+    #graficos img {
+        display: block;
+        margin: auto;
+    }
+
+    #second {
+        flex-direction: column;
+    }
+
+    header>div:nth-child(2),
+    header>div:nth-child(3) {
+        display: none;
+    }
+    header>div:nth-child(4){
+        display: block;
+    }
+    #titulo2 p{
+        width: 100%;
+    }
+
+    #comments div.comment-card:nth-child(3),
+    div.comment-card:nth-child(1) {
+        display: none;
+    }
+
+    #orange div:first-child {
+        flex-direction: column;
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    #orange div p {
+        margin-bottom: 30px;
+        text-align: center;
+        width: 100%;
+    }
+
+    footer section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer section div.social-networks{
+        order: 3;
+        flex-direction: column-reverse ;
+    }
+    footer section .links-container{
+        order: 2;
+        margin-bottom: 40px;
+    }
+    
+    footer section .contact-us{
+        order: 1;
+        margin-bottom: 40px;
+        width: 375px;
+    }
+
+    footer section .contact-us form{
+        width: 375px;
+        justify-content: center;
+    }
+    footer section .contact-us form input{
+        width: 211px;
+    }
+
+    footer section div.social-networks >div{
+        margin-bottom: 50px;
+    }
+
+    footer section div.social-networks img{
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        line-height: 42px; 
+    }
+
+    footer h6{
+        text-align: center;
+        margin-top: 50px !important ;
+    }
+    .paragraphTypo{
+        color: #B3B2B7;
+    }
 }
