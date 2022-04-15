@@ -4,7 +4,7 @@
 }
 
 .margin-layout {
-    margin: 2.5% 11.5%;
+    margin: 2.5% 11.5% 0;
 }
 
 header {
@@ -17,8 +17,8 @@ header {
 header ul{
 display: flex;
 justify-content: space-between;
-flex: 2;
 }
+
 header ul il{
     width: 3.8%;
     height: 19px;
@@ -30,7 +30,7 @@ header ul il{
     }
 header button{
     width: 12.1%;
-    }
+     }
 .botones{
     align-items: center;
     padding: 10px;
@@ -288,10 +288,24 @@ color: #3F4868;
     width: 50%; 
 }
 
-footer {
-    margin: 0;
+footer{
+    margin-top: 0;
     background-color: #1E1E26;
-    ;
     height: 247px;
+}
+footer section{
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h6{
+display: block;
+text-align: end;
+height: 19.85px;
+font-weight: 500;
+font-size: 12.5px;
+line-height: 18px;
+color: #8C8C94;
 
 }
